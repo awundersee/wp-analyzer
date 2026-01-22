@@ -1,0 +1,8 @@
+/* 1) Bootstrap Variablen überschreiben */
+@use "./bootstrap-vars";
+
+/* 2) Bootstrap laden */
+@use "bootstrap/scss/bootstrap";
+
+/* 3) Eigene App-Styles */
+@use "./app";
