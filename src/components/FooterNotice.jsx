@@ -2,15 +2,19 @@ export default function DomainForm() {
   return (
     <section
       id="footer-notice"
-      className="bg-light position-fixed w-100 disclaimer-wrapper z-0 start-0 end-0 bottom-0"
+      className="bg-light disclaimer-wrapper z-0 start-0 end-0 bottom-0"
     >
       <div className="container-fluid">
         <div className="p-lg-4 p-3 ps-md-0 pe-md-0 text-secondary text-center">
           <div className="row">
             <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 fw-light">
               <small>
-                Bei dieser Webseite handelt es sich um eine Projektarbeit.
+                <p>
+                Bei dieser Webseite handelt es sich um eine Projektarbeit. Zu Testzwecken 
+                kann der folgende REST-Endpunkt meiner WordPress-Seite genutzt werden:
                 <br />
+                <span className="text-dark">https://andreas.wundersee.com/wp-json/custom/v1/pages</span>
+                </p>
                 ©2026{" "}
                 <a
                   href="https://bureau.wundersee.com"

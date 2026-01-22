@@ -6,7 +6,6 @@ body {
 .app-container {
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 200px;
 }
 
 .list-group-item .form-check-input {
@@ -20,4 +19,12 @@ body {
 
 .form-control:focus, .btn:focus-visible {
     box-shadow: none;
+}
+
+.list-wrapper .btn-link {
+  color: inherit;
+}
+.list-wrapper .btn-link:hover {
+  text-decoration: none !important;
+  color:inherit;
 }
