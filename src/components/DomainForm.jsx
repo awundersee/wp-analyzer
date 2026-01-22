@@ -146,8 +146,8 @@ export default function DomainForm() {
       {/* Loader.gif bei "Seiten laden" */}
       {isLoading && (
         <div className="d-flex align-items-center gap-2 mb-3">
-          <img src="/loader.gif" alt="Loading" width="28" height="28" />
-          <span className="text-muted">Seiten werden geladen…</span>
+          <img src="/loader.gif" alt="Loading" width="28" height="3" />
+          <span className="text-primary">Seiten werden geladen</span>
         </div>
       )}
 
