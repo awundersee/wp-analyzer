@@ -1,8 +1,15 @@
-/* 1) Bootstrap Variablen überschreiben */
-@use "./bootstrap-vars";
-
-/* 2) Bootstrap laden */
-@use "bootstrap/scss/bootstrap";
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #0d6efd,
+  $body-bg: #fff,
+  $body-color: #212529,
+  $alert-padding-x: 0.5rem,
+  $alert-padding-y: 0.7rem,
+  $btn-focus-box-shadow: none,
+  $code-color: #1356ba,
+  $info-bg-subtle: #cee2ff,
+  $info-text-emphasis: #1356ba,
+  $info-border-subtle: #0d6efd
+);
 
 /* 3) Eigene App-Styles */
 @use "./app";

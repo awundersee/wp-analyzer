@@ -79,7 +79,7 @@ export default function DomainForm() {
   return (
     <>
       <form onSubmit={handleLoadPages} className="mb-3">
-        <label className="form-label">WordPress Domain</label>
+        <label className="form-label ms-2 d-none">WordPress Domain</label>
         <div className="input-group">
           <input
             type="text"
@@ -92,9 +92,9 @@ export default function DomainForm() {
             Seiten laden
           </button>
         </div>
-        <div className="form-text">
-          Voraussetzung: WordPress REST API ist erreichbar (
-          <code>/wp-json/wp/v2/pages</code>).
+        <div className="form-text px-2 mt-2">
+          Alternative: Eigener REST-Endpunkt (z. B. <code>https://example.com/wp-json/custom/v1/pages</code>) 
+          mit vollständiger URL angeben.
         </div>
       </form>
 

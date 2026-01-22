@@ -1,12 +1,23 @@
 body {
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 .app-container {
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 200px;
 }
 
 .list-group-item .form-check-input {
   margin-top: 0;
+}
+
+.form-control {
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
+}
+
+.form-control:focus, .btn:focus-visible {
+    box-shadow: none;
 }
