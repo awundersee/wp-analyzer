@@ -24,7 +24,38 @@ body {
 .list-wrapper .btn-link {
   color: inherit;
 }
+
 .list-wrapper .btn-link:hover {
   text-decoration: none !important;
   color:inherit;
+}
+
+.alert.position-absolute {
+  bottom:0;
+}
+
+.content-container .form-container {
+  padding-bottom: 6rem;
+}
+
+.analyze-container li, .analyze-container ul {
+  list-style-type: none;
+  padding:0;
+  margin:0
+}
+
+.analyze-container ul {
+  margin-top:0.5rem;
+}
+
+.overview-container span:after {
+  content: "·";
+  display: inline-block;
+  position: relative;
+  padding-left:1rem;
+  padding-right: 1rem;
+}
+
+.overview-container span:last-of-type:after {
+  display: none;
 }

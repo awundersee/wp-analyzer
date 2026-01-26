@@ -26,3 +26,6 @@ dist-ssr
 .vite/
 .vscode/
 .idea/
+
+# local env files
+.env.local

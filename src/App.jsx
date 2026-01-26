@@ -6,7 +6,7 @@ function App() {
     <div className="d-flex flex-column bg-white">
       <main className="flex-grow-1 d-flex align-items-center px-3 min-vh-100 py-4">
         <div className="app-container w-100">
-          <div className="content-container list-wrapper">
+          <div className="content-container list-wrapper position-relative">
             <h1 className="ms-2">
               <span className="text-primary fw-bold">WordPress</span> Textanalyse-Tool
             </h1>
