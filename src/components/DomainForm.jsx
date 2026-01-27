@@ -3,6 +3,7 @@ import { Modal } from "bootstrap";
 import { fetchPages } from "../api/wordpressApi";
 import { buildPageObjects } from "../services/buildPageObjects";
 import { analyzeDomain } from "../api/backendClient";
+import { downloadAnalysisCsv, downloadAnalysisJson } from "../utils/downloadAnalysis";
 
 export default function DomainForm() {
   const [domain, setDomain] = useState("");
@@ -248,7 +249,7 @@ export default function DomainForm() {
           <div className="d-flex flex-wrap gap-2 align-items-center mb-2">
             <button
               type="button"
-              className="btn btn-outline-secondary btn-sm"
+              className="btn btn-outline-secondary"
               onClick={toggleAll}
             >
               {allSelected ? "Auswahl aufheben" : "Alle auswählen"}
@@ -256,7 +257,7 @@ export default function DomainForm() {
 
             <button
               type="button"
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary"
               onClick={handleAnalyze}
               disabled={isLoading || preparedPageObjects.length === 0}
               title={preparedPageObjects.length === 0 ? "Bitte mindestens eine Seite auswählen" : ""}
@@ -337,6 +338,8 @@ export default function DomainForm() {
       {/* Optional: Ergebnis-Vorschau (minimal) */}
       {analysisResult && (
       <div className="mt-4 analyze-container">
+
+          <div className="d-flex justify-content-between align-items-center">
             {/* optional: Meta-Info oben */}
             {meta && (
               <div className="small text-secondary mb-3">
@@ -347,6 +350,26 @@ export default function DomainForm() {
                 </div>
               </div>
             )}
+
+            <div className="d-flex gap-2 mb-3">
+              <button
+                type="button"
+                className="btn btn-outline-secondary"
+                onClick={() => downloadAnalysisCsv(analysisResult)}
+              >
+                CSV herunterladen
+              </button>
+
+              <button
+                type="button"
+                className="btn btn-outline-primary"
+                onClick={() => downloadAnalysisJson(analysisResult)}
+              >
+                JSON herunterladen
+              </button>
+            </div>
+
+          </div>
 
             {/* optional: Domain-Result als erstes Accordion-Item */}
             <div className="accordion mb-3" id="domainAccordion">

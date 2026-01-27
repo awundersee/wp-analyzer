@@ -9,7 +9,7 @@ Der Fokus liegt auf:
 - Strukturierte Übergabe der aufbereiteten Daten an ein Backend
 
 Die Anwendung ist über folgenden Link erreichbar:
-[wp-analyzer.wundersee.dev](https://wp-analyzer.wundersee.dev)
+[textanalyse.wundersee.dev](https://textanalyse.wundersee.dev)
 
 ---
 
@@ -37,7 +37,7 @@ Das Frontend übernimmt **keine Analyse**, sondern bereitet ausschließlich die 
 
 ---
 
-## Projektstruktur (Auszug)
+## Projektstruktur (Überblick)
 
 ```text
 src/
