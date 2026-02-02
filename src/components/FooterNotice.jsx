@@ -11,9 +11,9 @@ export default function DomainForm() {
               <small>
                 <p>
                 Bei dieser Webseite handelt es sich um eine Projektarbeit. Zu Testzwecken 
-                kann der folgende REST-Endpunkt meiner WordPress-Seite genutzt werden:
+                kann der individuelle API-Endpunkt meiner Webseite genutzt werden:
                 <br />
-                <span className="text-dark">https://andreas.wundersee.com/wp-json/custom/v1/pages</span>
+                <span className="text-dark">https://bureau.wundersee.com/api/pages</span>
                 </p>
                 ©2026{" "}
                 <a
