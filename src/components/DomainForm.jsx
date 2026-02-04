@@ -345,7 +345,7 @@ export default function DomainForm() {
               <div className="small text-secondary mb-3">
                 <div><strong>Domain:</strong> {meta.domain}</div>
                 <div>
-                  <strong>Laufzeit:</strong> {meta.runtimeMs} ms<br></br>
+                  <strong>Laufzeit:</strong> {meta.runtimeMsTotal} ms<br></br>
                   <strong>Seiten:</strong> {meta.pagesReceived}
                 </div>
               </div>
