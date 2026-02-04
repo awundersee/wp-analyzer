@@ -59,3 +59,8 @@ body {
 .overview-container span:last-of-type:after {
   display: none;
 }
+
+.single-hit code {
+  opacity: 0.8;
+  color:var(--bs-secondary);
+}

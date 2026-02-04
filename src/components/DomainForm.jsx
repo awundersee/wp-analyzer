@@ -396,16 +396,16 @@ export default function DomainForm() {
 
                     <div className="overview-container">
 
-                      {meta?.wordCount != null && (
-                        <span className="mb-2"><strong>Wortanzahl:</strong> {meta.wordCount}</span>
+                      {domainResult?.wordCount != null && (
+                        <span className="mb-2"><strong>Wortanzahl:</strong> {domainResult.wordCount}</span>
                       )}
 
-                      {meta?.wordCharCount != null && (
-                        <span className="mb-2"><strong>Wortzeichenanzahl:</strong> {meta.wordCharCount}</span>
+                      {domainResult?.wordCharCount != null && (
+                        <span className="mb-2"><strong>Wortzeichenanzahl:</strong> {domainResult.wordCharCount}</span>
                       )}
 
-                      {meta?.charCount != null && (
-                        <span className="mb-2"><strong>Gesamtzeichenanzahl:</strong> {meta.charCount}</span>
+                      {domainResult?.charCount != null && (
+                        <span className="mb-2"><strong>Gesamtzeichenanzahl:</strong> {domainResult.charCount}</span>
                       )}
 
                     </div>
@@ -414,31 +414,34 @@ export default function DomainForm() {
                       <div className="col-md-6">
                         <strong>Top-Wörter</strong>
                         <ul className="mb-3">
-                          {(domainResult?.words ?? [])
-                            .filter(w => w.count >= 2)
-                            .map((w) => (
-                              <li key={w.word}>
-                                <code>{w.word}</code>{" "}
-                                <span className="text-secondary">
-                                  ({w.count}
-                                  {meta?.wordCount ? ` · ${pct(w.count, meta.wordCount)}%` : ""})
-                                </span>
-                              </li>
-                            ))}
+                          {(domainResult?.words ?? []).map((w) => (
+                            <li
+                              key={w.word}
+                              className={w.count === 1 ? "single-hit" : ""}
+                            >
+                              <code>{w.word}</code>{" "}
+                              <span className="text-secondary">
+                                ({w.count}
+                                {meta?.wordCount ? ` · ${pct(w.count, meta.wordCount)}%` : ""})
+                              </span>
+                            </li>
+                          ))}
+
                         </ul>
                       </div>
 
                       <div className="col-md-6">
                         <strong>Top-Wortpaare</strong>
                         <ul className="mb-0">
-                          {(domainResult?.bigrams ?? [])
-                            .filter(b => b.count >= 2)
-                            .map((b, idx) => (
-                              <li key={`${b.w1}-${b.w2}-${idx}`}>
-                                <code>{b.w1} {b.w2}</code>{" "}
-                                <span className="text-secondary">({b.count})</span>
-                              </li>
-                            ))}
+                          {(domainResult?.bigrams ?? []).map((b, idx) => (
+                            <li
+                              key={`${b.w1}-${b.w2}-${idx}`}
+                              className={b.count === 1 ? "single-hit" : ""}
+                            >
+                              <code>{b.w1} {b.w2}</code>{" "}
+                              <span className="text-secondary">({b.count})</span>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
@@ -502,31 +505,33 @@ export default function DomainForm() {
                           <div className="col-md-6">
                             <strong>Wörter</strong>
                             <ul className="mb-0">
-                              {(p.words ?? [])
-                                .filter(w => w.count >= 2)
-                                .map((w) => (
-                                  <li key={w.word}>
-                                    <code>{w.word}</code>{" "}
-                                    <span className="text-secondary">
-                                      ({w.count}
-                                      {meta?.wordCount ? ` · ${pct(w.count, meta.wordCount)}%` : ""})
-                                    </span>
-                                  </li>
-                                ))}
+                              {(p.words ?? []).map((w) => (
+                                <li
+                                  key={w.word}
+                                  className={w.count === 1 ? "single-hit" : ""}
+                                >
+                                  <code>{w.word}</code>{" "}
+                                  <span className="text-secondary">
+                                    ({w.count}
+                                    {meta?.wordCount ? ` · ${pct(w.count, meta.wordCount)}%` : ""})
+                                  </span>
+                                </li>
+                              ))}
                             </ul>
                           </div>
 
                           <div className="col-md-6">
                             <strong>Wortpaare</strong>
                             <ul className="mb-0">
-                              {(p.bigrams ?? [])
-                                .filter(b => b.count >= 2)
-                                .map((b, idx) => (
-                                  <li key={`${b.w1}-${b.w2}-${idx}`}>
-                                    <code>{b.w1} {b.w2}</code>{" "}
-                                    <span className="text-secondary">({b.count})</span>
-                                  </li>
-                                ))}
+                              {(p.bigrams ?? []).map((b, idx) => (
+                                <li
+                                  key={`${b.w1}-${b.w2}-${idx}`}
+                                  className={b.count === 1 ? "single-hit" : ""}
+                                >
+                                  <code>{b.w1} {b.w2}</code>{" "}
+                                  <span className="text-secondary">({b.count})</span>
+                                </li>
+                              ))}
                             </ul>
                           </div>
                         </div>
