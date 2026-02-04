@@ -13,7 +13,7 @@ export default function DomainForm() {
                 Bei dieser Webseite handelt es sich um eine Projektarbeit. Zu Testzwecken 
                 kann der individuelle API-Endpunkt meiner Webseite genutzt werden:
                 <br />
-                <span className="text-dark">https://bureau.wundersee.com/api/pages</span>
+                <span className="text-dark">https://bureau.wundersee.com/api/pages.json</span>
                 </p>
                 ©2026{" "}
                 <a
